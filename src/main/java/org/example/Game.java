@@ -33,9 +33,8 @@ public class Game {
 
     private Attempt getNextAttempt() {
         messageDisplay.display(String.format("Attempt %d of %d\n", attemptCount + 1, MAX_ATTEMPTS));
-        Attempt attempt = attemptReader.read();
         attemptCount++;
-        return attempt;
+        return attemptReader.read();
     }
 
     private boolean isGameContinuing() {
